@@ -1051,3 +1051,27 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
+/* --- MOBILER ÜBERLAUF-SCHUTZ FÜR DIE STARTSEITE --- */
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Verhindert das seitliche Wegschieben absolut */
+}
+
+/* Garantiert, dass Boxen und Banner auf Handys nie breiter als der Bildschirm sind */
+.welcome-text-box, 
+.phone-order-banner, 
+.info-box, 
+.news-section {
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+/* Sichert ab, dass auch das News-Bild sauber skaliert */
+.news-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
