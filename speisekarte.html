@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speisekarte - Landgasthof Adler</title>
+    <!-- Verknüpfung zur selben CSS-Datei -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Kopfzeile mit Logo/Banner -->
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Landgasthof Adler Logo" class="site-logo">
+            </a>
+            
+            <!-- Mobiler Burger-Menu-Button -->
+            <button class="menu-toggle" aria-label="Menü öffnen" onclick="toggleMenu()">
+                ☰ Menü
+            </button>
+        </div>
+
+        <!-- Die Navigationsleiste -->
+        <nav class="main-nav" id="mainNav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="oeffnungszeiten.html">Öffnungszeiten</a></li>
+                
+                <!-- Dropdown Menü für Speisekarte -->
+                <li class="dropdown">
+                    <a href="speisekarte.html" class="dropbtn">Speisekarte &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="mittagstisch.html">Mittagstisch</a>
+                        <a href="speisekarte.html">Speisekarte</a>
+                        <a href="feiertagskarte.html">Sonn- und Feiertagskarte</a>
+                    </div>
+                </li>
+                
+<li><a href="veranstaltungen.html">Veranstaltungen</a></li>
+                <li><a href="catering.html">Catering & Lieferung</a></li>
+                <li><a href="kontakt.html">Kontakt & Anfahrt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hauptinhalt: Speisekarte (PDF) -->
+    <main class="container">
+        <section class="pdf-section">
+            <h2>Unsere Speisekarte</h2>
+            <p class="subtitle">Entdecken Sie unsere traditionelle deutsche Küche und gutbürgerliche Hausmannskost.</p>
+
+            <!-- Lieferservice-Hinweis direkt über der PDF-Ansicht -->
+            <div class="delivery-notice-box">
+                <span class="delivery-icon">🚗</span>
+                <div class="delivery-text">
+                    <strong>Gerne liefern wir unsere Gerichte auch zu Ihnen nach Hause!</strong>
+                    <p>Sprechen Sie uns einfach an oder rufen Sie uns an unter <a href="tel:07957926877">07957 926877</a>, wenn Sie Speisen bestellen möchten.</p>
+                </div>
+            </div>
+
+            <!-- MOBILER HINWEIS-BUTTON (Auf dem Handy sofort sichtbar, auf dem PC ausgeblendet) -->
+            <div class="mobile-pdf-fallback">
+                <p>📱 Sie schauen mit dem Smartphone zu? Da Handys PDFs oft nicht direkt anzeigen können, öffnen Sie unsere Speisekarte bitte hier:</p>
+                <a href="images/speisekarte.pdf" target="_blank" class="download-btn" style="background-color: #4CAF50; color: white; display: inline-block; padding: 12px 25px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px;">
+                    📄 Speisekarte öffnen & anschauen
+                </a>
+            </div>
+
+            <!-- Eingebettete PDF-Speisekarte (Auf dem PC sichtbar, auf dem Handy automatisch ausgeblendet) -->
+            <div class="pdf-container desktop-pdf-view">
+                <object data="images/speisekarte.pdf" type="application/pdf" width="100%" height="1100px">
+                    <p>Ihr Browser kann das PDF leider nicht direkt anzeigen. 
+                       Sie können die Speisekarte hier herunterladen: 
+                       <a href="images/speisekarte.pdf" target="_blank">Speisekarte als PDF herunterladen</a>.
+                    </p>
+                </object>
+            </div>
+        </section>
+    </main>
+
+<!-- Fußleiste -->
+    <footer>
+        <div class="footer-content">
+            <span>&copy; 2026 Landgasthof Adler</span>
+            <span class="separator">|</span>
+            <a href="datenschutz.html">Datenschutz</a>
+            <span class="separator">|</span>
+            <a href="impressum.html">Impressum</a>
+        </div>
+    </footer>
+    <!-- Skript für das mobile Burger-Menü -->
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("mainNav");
+            nav.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

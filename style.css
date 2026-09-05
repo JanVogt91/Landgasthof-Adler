@@ -1,0 +1,1047 @@
+/* --- 1. GRUNDLEGENDE EINSTELLUNGEN --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #FDFDFD; /* Sehr helles Grau aus dem Bild */
+    color: #333333;            /* Dunkelgrau aus dem Bild */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+
+/* --- 2. KOPFZEILE & LOGO (Breit gezogen) --- */
+header {
+    background-color: #FDFDFD;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    padding: 25px 20px;
+}
+
+.site-logo {
+    width: 100%;            /* Zieht das Logo in die Breite */
+    max-width: 650px;       /* Maximale Breite, damit es auf großen Bildschirmen perfekt wirkt */
+    height: auto;           /* Hält das Seitenverhältnis automatisch im Gleichgewicht */
+    display: block;
+    margin: 0 auto;         /* Zentriert das Logo im Header */
+}
+
+
+/* --- 3. HAUPT-NAVIGATION (Grüner Balken aus dem Logo) --- */
+.main-nav {
+    background-color: #4CAF50; /* Das grüne Band aus Ihrem Logo */
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list > li > a {
+    color: white;
+    padding: 15px 25px;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+    display: block;
+}
+
+.nav-list > li > a:hover {
+    background-color: #419644; /* Etwas dunkleres Grün beim Drüberfahren mit der Maus */
+}
+
+
+/* --- 4. DROPDOWN-MENÜ (Rein über CSS, keine Cookies/JS nötig) --- */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 10;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #333333;
+    padding: 12px 18px;
+    display: block;
+    text-align: left;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: #4CAF50;
+}
+
+/* Öffnet das Dropdown automatisch, wenn die Maus darauf zeigt */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* --- 5. HAUPTINHALT --- */
+.welcome-section {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.info-box {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    display: inline-block;
+    border: 1px solid #eee;
+}
+
+.info-box p {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+
+/* --- 6. FUSSLEISTE --- */
+footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: auto; /* Drückt den Footer immer schön an das untere Ende der Seite */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer-content a {
+    margin: 0 12px;
+    transition: color 0.2s ease;
+}
+
+.footer-content a:hover {
+    color: #4CAF50;
+}
+
+.separator {
+    color: #777777;
+}
+
+
+/* --- 7. MOBILE ANSICHT (Smartphones & Tablets) --- */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: #419644;
+    }
+
+    .dropdown-content a {
+        color: white;
+        text-align: center;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #367d39;
+        color: white;
+    }
+
+    .site-logo {
+        max-width: 90%; /* Passt sich auf kleineren Bildschirmen optimal an */
+    }
+}
+
+/* --- NEUIGKEITEN-BOX (FÜR KURZFRISTIGE INFOS / JPG-AUSTAUSCH) --- */
+.news-section {
+    margin-top: 60px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.news-section h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.news-subtitle {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.news-image-container {
+    max-width: 700px; /* Maximale Breite des Hinweisschildes */
+    margin: 0 auto;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 2px dashed #4CAF50; /* Ein schöner grüner, gestrichelter Rahmen um das Info-Bild */
+    padding: 10px;
+    background-color: #fafafa;
+}
+
+.news-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Spezieller Stil für den Küchen-Hinweis */
+.kitchen-info {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px dashed #ddd;
+    color: #4CAF50; /* Das passende Grün aus Ihrem Logo */
+    font-weight: 600;
+}
+
+/* --- ÖFFNUNGSZEITEN TABELLE --- */
+.opening-hours-section {
+    text-align: center;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.table-container {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+}
+
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.hours-table tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.hours-table tr:last-child {
+    border-bottom: none;
+}
+
+.hours-table td {
+    padding: 15px 25px;
+    font-size: 17px;
+}
+
+/* Linke Spalte (Wochentag) fett gedruckt */
+.hours-table td:first-child {
+    font-weight: 600;
+    color: #333;
+    width: 40%;
+}
+
+/* Rechte Spalte (Uhrzeit) in Grün */
+.hours-table td:last-child {
+    color: #4CAF50;
+    font-weight: 500;
+}
+
+.hours-table td em {
+    font-size: 14px;
+    color: #777;
+    font-style: normal;
+    display: block;
+}
+
+/* --- PDF SPEISEKARTE ANZEIGE --- */
+.pdf-section {
+    text-align: center;
+}
+
+.pdf-container {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e0e0e0;
+}
+
+.pdf-container {
+    max-width: 1200px; /* Erhöht von 900px auf 1100px für mehr Breite */
+    margin: 0 auto 20px auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e0e0e0;
+}
+
+.pdf-download-box {
+    margin-top: 20px;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: #419644;
+}
+
+/* Anpassung für Smartphones (da manche mobile Browser <object> nicht inline anzeigen) */
+@media (max-width: 768px) {
+    .pdf-container {
+        display: none; /* Versteckt den großen Viewer auf Handys, damit der Download-Button greift */
+    }
+}
+
+/* --- KONTAKT & ANFAHRT SEITE --- */
+.contact-section {
+    text-align: center;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e0e0e0;
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+    text-align: left;
+}
+
+.contact-box h3 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.contact-box p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.map-link {
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+
+.map-link:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+.contact-box a[href^="tel:"], .contact-box a[href^="mailto:"] {
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+.contact-box a[href^="tel:"]:hover, .contact-box a[href^="mailto:"]:hover {
+    text-decoration: underline;
+}
+
+/* --- DATENSCHUTZ & IMPRESSUM SEITEN --- */
+.legal-section {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.legal-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.legal-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e0e0e0;
+    line-height: 1.6;
+}
+
+.legal-box h3 {
+    color: #4CAF50;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.legal-box h3:first-child {
+    margin-top: 0;
+}
+
+.legal-box p, .legal-box ul {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 15px;
+}
+
+.legal-box ul {
+    padding-left: 20px;
+}
+
+.legal-box li {
+    margin-bottom: 5px;
+}
+
+/* --- WILLKOMMENS-SEKTION --- */
+.welcome-section,
+.news-section {
+    max-width: 900px; /* Einheitliche maximale Breite für beide Bereiche */
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.welcome-text-box,
+.news-image-container,
+.info-box {
+    background-color: #ffffff;
+    padding: 35px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    box-sizing: border-box; /* Sorgt dafür, dass Padding die Breite nicht sprengt */
+}
+
+/* Innenabstand für den Bild-Container anpassen, damit das Bild schön sitzt */
+.news-image-container {
+    padding: 15px; 
+    text-align: center;
+}
+
+/* --- SPEISEKARTE EXTRA BREIT UND PERFEKT ZENTRIERT --- */
+
+/* Wir lassen den äußeren Container so breit wie gewünscht (z.B. 1100px oder 1200px) */
+.pdf-section {
+    max-width: 1100px; 
+    margin: 0 auto;
+}
+
+.pdf-container {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e0e0e0;
+    
+    /* TRICK: Wir machen die Box insgesamt 120% bis 130% breit... */
+    width: 130%; 
+    /* ...und verschieben sie exakt um die Hälfte des Überhangs nach links, damit sie wieder perfekt zentriert ist! */
+    margin-left: -15%; 
+    box-sizing: border-box;
+}
+
+.pdf-container object {
+    width: 100%;
+    height: 1100px; /* Schön lang zum Scrollen */
+    border-radius: 4px;
+    border: none;
+}
+
+/* WICHTIG FÜR HANDYS: Auf kleinen Bildschirmen schalten wir den Trick wieder aus, 
+   damit es nicht über den Handy-Bildschirm hinausragt! */
+@media (max-width: 900px) {
+    .pdf-container {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+}
+
+/* --- AUFGEPEPPTE WILLKOMMENS-BOX --- */
+.centered-design {
+    text-align: center !important;
+}
+
+.intro-highlight {
+    font-size: 18px !important;
+    font-weight: 600;
+    color: #4CAF50; /* Zarter Grünton passend zum Landgasthof-Design */
+    margin-bottom: 20px !important;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Kleine Boxen für Catering & Lieferservice nebeneinander */
+.feature-badges {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.badge-item {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 20px;
+    flex: 1;
+    min-width: 260px;
+    max-width: 380px;
+    text-align: center;
+}
+
+.badge-item span {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.badge-item strong {
+    color: #333;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.badge-item p {
+    font-size: 14px !important;
+    color: #666;
+    margin: 0 !important;
+}
+
+.social-hint {
+    background-color: #f0f7f0;
+    padding: 12px;
+    border-radius: 6px;
+    margin: 25px 0 !important;
+    font-size: 15px !important;
+}
+
+.welcome-signature {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #ddd;
+    font-size: 16px;
+    color: #333;
+}
+
+.welcome-signature span {
+    font-size: 14px;
+    color: #777;
+}
+
+/* --- LIEFERSERVICE-HINWEIS AUF DER MITTAGSTISCH-SEITE --- */
+.delivery-notice-box {
+    background-color: #f0f7f0; /* Sehr sanfter Grünton */
+    border: 1px solid #c8e6c9;
+    border-left: 5px solid #4CAF50; /* Kräftiger grüner Akzentstreifen links */
+    border-radius: 6px;
+    padding: 15px 20px;
+    max-width: 900px;
+    margin: 0 auto 25px auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.delivery-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.delivery-text strong {
+    color: #2e7d32;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.delivery-text p {
+    margin: 0 !important;
+    font-size: 14px;
+    color: #444;
+}
+
+.delivery-text a {
+    color: #2e7d32;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.delivery-text a:hover {
+    text-decoration: underline;
+}
+
+/* --- SOCIAL MEDIA BOX AUF DER KONTAKTSEITE --- */
+.social-contact-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    max-width: 900px;
+    margin: 30px auto 0 auto;
+}
+
+.social-contact-box h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.social-contact-box p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.social-links-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.social-btn:hover {
+    opacity: 0.9;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+}
+
+.instagram-btn {
+    background-color: #E1306C;
+}
+
+.facebook-btn {
+    background-color: #1877F2;
+}
+
+/* --- INLINE SOCIAL MEDIA LINKS AUF DER STARTSEITE --- */
+.social-hint {
+    background-color: #f0f7f0;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 25px 0 !important;
+    font-size: 15px !important;
+    line-height: 1.6;
+}
+
+.inline-social-link {
+    font-weight: 700;
+    text-decoration: none;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.inline-social-link:hover {
+    text-decoration: underline;
+}
+
+.whatsapp-color {
+    color: #128c7e;
+}
+
+.instagram-color {
+    color: #c13584;
+}
+
+.facebook-color {
+    color: #1877f2;
+}
+
+/* --- ZENTRIERTE SEITENÜBERSCHRIFT (MITTAGSTISCH) --- */
+.centered-page-header {
+    text-align: center;
+}
+
+.centered-page-header h2,
+.centered-page-header .subtitle {
+    text-align: center;
+}
+
+/* --- NEBENSEITIGES LAYOUT FÜR VERANSTALTUNGEN --- */
+.events-layout-grid {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.events-image-col {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+}
+
+.events-table-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Die Box für die Tabelle */
+.upcoming-events-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.upcoming-events-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+/* Die eigentliche Tabelle */
+.events-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.events-table th, 
+.events-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.events-table th {
+    color: #555;
+    font-weight: 600;
+    background-color: #fafafa;
+}
+
+.events-table tr:hover {
+    background-color: #fcfcfc;
+}
+
+/* Für Mobilgeräte: Untereinander statt nebeneinander */
+@media (max-width: 900px) {
+    .events-layout-grid {
+        flex-direction: column;
+    }
+}
+
+/* --- TELEFON-HINWEIS-BANNER AUF DER STARTSEITE --- */
+.phone-order-banner {
+    background-color: #fff9e6; /* Ein sehr sanftes, warmes Cremegelb/Ocker */
+    border: 1px solid #ffe0b2;
+    border-left: 5px solid #ffb300; /* Kräftigerer gelb/oranger Akzentstreifen links */
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.phone-banner-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.phone-banner-text strong {
+    color: #b78103;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.phone-banner-text p {
+    margin: 0 !important;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+}
+
+.phone-banner-text a {
+    color: #b78103;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.phone-banner-text a:hover {
+    text-decoration: underline;
+}
+
+/* --- MOBILES BURGER-MENÜ --- */
+
+/* Standardmäßig ist der Button auf dem PC ausgeblendet */
+.menu-toggle {
+    display: none;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Ab Bildschirmgrößen unter 900px (Handys & Tablets) greift die mobile Ansicht */
+@media (max-width: 900px) {
+    
+    /* Logo-Container anpassen, damit der Button daneben Platz hat */
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    /* Button auf dem Handy sichtbar machen */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Das Menü standardmäßig auf dem Handy verstecken */
+    .main-nav {
+        display: none; 
+        width: 100%;
+        background-color: #333; /* Dunkler Hintergrund für das mobile Menü */
+    }
+
+    /* Wenn das JavaScript die Klasse "active" hinzufügt, klappt es aus */
+    .main-nav.active {
+        display: block;
+    }
+
+    /* Die Navigationsliste untereinander statt nebeneinander anordnen */
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-list li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #444;
+    }
+
+    .nav-list li a {
+        display: block;
+        padding: 15px;
+        color: white;
+    }
+
+    /* Dropdown für Speisekarte im Handy-Menü direkt untereinander anzeigen */
+    .dropdown .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: #2a2a2a;
+        display: block; /* Auf Handys dauerhaft anzeigen, wenn man im Menü ist, oder klassisch per Klick */
+    }
+
+    .dropdown-content a {
+        padding: 12px 20px !important;
+        font-size: 14px;
+        color: #ddd !important;
+        border-bottom: 1px solid #333;
+    }
+}
+
+/* --- STEUERUNG FÜR PDF AUF HANDY VS PC --- */
+
+/* Standardmäßig (auf dem PC) ist der Handy-Hinweis unsichtbar */
+.mobile-pdf-fallback {
+    display: none;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Wenn der Bildschirm kleiner als 900px ist (Handy-Modus): */
+@media (max-width: 900px) {
+    /* Das große, eingebettete PDF auf dem Handy ausblenden, da es dort oft fehlschlägt */
+    .desktop-pdf-view {
+        display: none;
+    }
+    
+    /* Stattdessen den schönen Button-Hinweis anzeigen */
+    .mobile-pdf-fallback {
+        display: block;
+    }
+}
+
+/* --- RESPONSIVE ANPASSUNG FÜR ALLE MENÜ- UND EVENTBILDER --- */
+.responsive-menu-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.centered-image-box {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* --- BILDER-SLIDESHOW FÜR VERANSTALTUNGEN --- */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Alle Bilder standardmäßig unsichtbar machen und übereinanderlegen */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Sanfter Überblende-Effekt über 1 Sekunde */
+    pointer-events: none;
+}
+
+/* Das allererste Bild (oder das aktive) wird sichtbar */
+.slide.active-slide {
+    position: relative; /* Sorgt dafür, dass der Container die richtige Höhe behält */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* --- 3 BILDER NEBENEINANDER FÜR CATERING --- */
+.catering-image-grid {
+    display: flex;
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.catering-img-box {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.catering-img-box img {
+    width: 100%;
+    height: 180px; /* Einheitliche Höhe für eine saubere Optik */
+    object-fit: cover; /* Schneidet die Bilder dezent zu, damit sie perfekt das Format füllen */
+    display: block;
+}
+
+/* Auf Handys untereinander anzeigen */
+@media (max-width: 768px) {
+    .catering-image-grid {
+        flex-direction: column;
+    }
+    .catering-img-box img {
+        height: auto; /* Auf Smartphones in voller Originalhöhe anzeigen */
+    }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt & Anfahrt - Landgasthof Adler</title>
+    <!-- Verknüpfung zur selben CSS-Datei -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Kopfzeile mit Logo/Banner -->
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Landgasthof Adler Logo" class="site-logo">
+            </a>
+            
+            <!-- NEU: Der Burger-Menu-Button für Handys -->
+            <button class="menu-toggle" aria-label="Menü öffnen" onclick="toggleMenu()">
+                ☰ Menü
+            </button>
+        </div>
+
+        <!-- Die Navigationsleiste (mit ID für das JavaScript) -->
+        <nav class="main-nav" id="mainNav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="oeffnungszeiten.html">Öffnungszeiten</a></li>
+                
+                <!-- Dropdown Menü für Speisekarte -->
+                <li class="dropdown">
+                    <a href="speisekarte.html" class="dropbtn">Speisekarte &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="mittagstisch.html">Mittagstisch</a>
+                        <a href="speisekarte.html">Speisekarte</a>
+                        <a href="feiertagskarte.html">Sonn- und Feiertagskarte</a>
+                    </div>
+                </li>
+                
+<li><a href="veranstaltungen.html">Veranstaltungen</a></li>
+                <li><a href="catering.html">Catering & Lieferung</a></li>
+                <li><a href="kontakt.html">Kontakt & Anfahrt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hauptinhalt: Kontakt & Anfahrt -->
+    <main class="container">
+        <section class="contact-section">
+            <h2>Kontakt & Anfahrt</h2>
+            <p class="subtitle">Wir freuen uns auf Ihre Nachricht, Ihre Bestellung oder Ihren Besuch bei uns in Mariäkappel.</p>
+
+            <div class="contact-grid">
+                <!-- Kontaktdaten Box -->
+                <div class="contact-box">
+                    <h3>Landgasthof Adler</h3>
+                    <p>
+                        <a href="https://maps.app.goo.gl/mgVX2R44UgxtT9yi8" target="_blank" class="map-link">
+                            📍 Crailsheimer Straße 18<br>
+                            74564 Kreßberg - Mariäkappel
+                        </a>
+                    </p>
+                    <p style="margin-top: 20px;">
+                        📞 Telefon: <a href="tel:07957926877">07957 926877</a>
+                    </p>
+                    <p style="margin-top: 10px;">
+                        ✉️ E-Mail: <a href="mailto:Landgasthofadler@web.de">Landgasthofadler@web.de</a>
+                    </p>
+                </div>
+
+                <!-- Anfahrts-Hinweis / Routenplaner Button -->
+                <div class="contact-box">
+                    <h3>Route planen</h3>
+                    <p>Klicken Sie auf den unteren Button, um direkt zu unserem Google-Eintrag zu gelangen und die Route zu planen:</p>
+                    <a href="https://maps.app.goo.gl/mgVX2R44UgxtT9yi8" target="_blank" class="download-btn" style="margin-top: 20px;">
+                        🗺️ In Google Maps öffnen
+                    </a>
+                </div>
+            </div>
+
+            <!-- NEU: Social Media & WhatsApp Box -->
+            <div class="social-contact-box" style="margin-top: 30px;">
+                <h3>Bleiben Sie in Verbindung!</h3>
+                <p>Folgen Sie uns auf unseren Kanälen und verpassen Sie keinen aktuellen Speiseplan mehr:</p>
+                
+                <div class="social-links-grid">
+                    <a href="https://whatsapp.com/channel/0029VacyyfI4Y9ln62MXui1x" target="_blank" class="social-btn whatsapp-btn">
+                        💬 WhatsApp-Gruppe
+                    </a>
+                    <a href="https://www.instagram.com/landgasthofadler_kressberg/" target="_blank" class="social-btn instagram-btn">
+                        📸 Instagram
+                    </a>
+                    <a href="https://www.facebook.com/adlerteam.mariaekappel" target="_blank" class="social-btn facebook-btn">
+                        📘 Facebook
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Fußleiste -->
+    <footer>
+        <div class="footer-content">
+            <span>&copy; 2026 Landgasthof Adler</span>
+            <span class="separator">|</span>
+            <a href="datenschutz.html">Datenschutz</a>
+            <span class="separator">|</span>
+            <a href="impressum.html">Impressum</a>
+        </div>
+    </footer>
+    <!-- Skript für das mobile Burger-Menü -->
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("mainNav");
+            nav.classList.toggle("active");
+        }
+    </script>
+    
+</body>
+</html>

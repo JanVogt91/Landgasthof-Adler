@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering & Lieferservice - Landgasthof Adler</title>
+    <!-- Verknüpfung zur zentralen CSS-Datei -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Kopfzeile mit Logo/Banner -->
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Landgasthof Adler Logo" class="site-logo">
+            </a>
+            
+            <!-- Mobiler Burger-Menu-Button -->
+            <button class="menu-toggle" aria-label="Menü öffnen" onclick="toggleMenu()">
+                ☰ Menü
+            </button>
+        </div>
+
+        <!-- Die Navigationsleiste -->
+        <nav class="main-nav" id="mainNav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="oeffnungszeiten.html">Öffnungszeiten</a></li>
+                
+                <!-- Dropdown Menü für Speisekarte -->
+                <li class="dropdown">
+                    <a href="speisekarte.html" class="dropbtn">Speisekarte &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="mittagstisch.html">Mittagstisch</a>
+                        <a href="speisekarte.html">Speisekarte</a>
+                        <a href="feiertagskarte.html">Sonn- und Feiertagskarte</a>
+                    </div>
+                </li>
+                
+                <li><a href="veranstaltungen.html">Veranstaltungen</a></li>
+                <li><a href="catering.html" class="active">Catering & Lieferung</a></li>
+                <li><a href="kontakt.html">Kontakt & Anfahrt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hauptinhalt: Catering & Lieferservice -->
+    <main class="container">
+        <section class="menu-image-section centered-page-header">
+            <h2>Catering & Lieferservice</h2>
+            <p class="subtitle">Echtes, gutes Essen für Ihr Zuhause oder Ihre Feier.</p>
+
+            <!-- 3 Bilder nebeneinander über dem Text -->
+            <div class="catering-image-grid">
+                <!-- Speichern Sie die Bilder als catering1.jpg, catering2.jpg, catering3.jpg im Ordner "images" -->
+                <div class="catering-img-box">
+                    <img src="images/catering1.jpg" alt="Buffet und Essen vom Landgasthof Adler" class="responsive-menu-img">
+                </div>
+                <div class="catering-img-box">
+                    <img src="images/catering2.jpg" alt="Gutbürgerliche Küche für Feiern" class="responsive-menu-img">
+                </div>
+                <div class="catering-img-box">
+                    <img src="images/catering3.jpg" alt="Catering für Feste und Events" class="responsive-menu-img">
+                </div>
+            </div>
+
+            <!-- Wichtiger Telefon-Hinweis -->
+            <div class="phone-order-banner" style="max-width: 900px; margin: 30px auto;">
+                <span class="phone-banner-icon">📞</span>
+                <div class="phone-banner-text">
+                    <strong>Persönliche Absprache & Bestellungen</strong>
+                    <p>Alle Details zu unserem Lieferservice und individuelle Absprachen für Ihr Catering besprechen wir am besten direkt telefonisch unter <a href="tel:07957926877">07957 926877</a>.</p>
+                </div>
+            </div>
+
+            <!-- Text-Inhalt mit gutbürgerlicher Beschreibung -->
+            <div class="welcome-text-box centered-design" style="max-width: 900px; text-align: left; margin: 0 auto;">
+                <p class="intro-highlight">
+                    Mit echter Hausmannskost und herzhafter gutbürgerlicher Küche machen wir Ihre Feier zu einem runden Erlebnis.
+                </p>
+                
+                <p>
+                    Ob im kleineren Kreis oder bei größeren Festen – wir bringen echten Geschmack und deftige Köstlichkeiten direkt aus unserer Küche auf den Tisch. Von reichhaltigen warmen Buffets über knusprige Braten mit passenden Beilagen bis hin zu deftigen Klassikern richten wir das Essen ganz nach Ihren Wünschen für jeden Anlass aus:
+                </p>
+
+                <ul style="margin: 15px 0 20px 20px; line-height: 1.6;">
+                    <li><strong>Familienfeiern:</strong> Geburtstage, Taufen, Konfirmationen oder runde Jubiläen</li>
+                    <li><strong>Feste & Feiern:</strong> Vereinsfeste, gemütliche Runden oder Weihnachtsfeiern</li>
+                    <li><strong>Geschäftliche Anlässe:</strong> Firmenfeiern und Zusammenkünfte</li>
+                </ul>
+
+                <p>
+                    <strong>Mittagstisch-Lieferservice:</strong> Von Montag bis Freitag liefern wir unseren frischen Mittagstisch direkt zu Ihnen nach Hause, in Firmen, Kindergärten oder Schulen in Kreßberg und Umgebung. <em>(Bestellannahme für den jeweiligen Tag bis spätestens 09:00 Uhr).</em>
+                </p>
+
+                <p style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #eee;">
+                    Damit alles genau zu Ihrem Fest passt und wir Ihre Wünsche besprechen können, rufen Sie uns am besten einfach an. Wir beraten Sie persönlich und finden gemeinsam genau das Richtige für Ihre Gäste!
+                </p>
+            </div>
+
+            <!-- Zusätzlicher Info-Kasten -->
+            <div class="info-box" style="max-width: 900px; margin: 30px auto 0 auto;">
+                <p><strong>Landgasthof Adler</strong> – Telefon: <strong>07957 926877</strong></p>
+            </div>
+        </section>
+    </main>
+
+<!-- Fußleiste -->
+    <footer>
+        <div class="footer-content">
+            <span>&copy; 2026 Landgasthof Adler</span>
+            <span class="separator">|</span>
+            <a href="datenschutz.html">Datenschutz</a>
+            <span class="separator">|</span>
+            <a href="impressum.html">Impressum</a>
+        </div>
+    </footer>
+    <!-- Skript für das mobile Burger-Menü -->
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("mainNav");
+            nav.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

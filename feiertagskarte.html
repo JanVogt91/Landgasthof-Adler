@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonn- und Feiertagskarte - Landgasthof Adler</title>
+    <!-- Verknüpfung zur selben CSS-Datei -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Kopfzeile mit Logo/Banner -->
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Landgasthof Adler Logo" class="site-logo">
+            </a>
+            
+            <!-- NEU: Der Burger-Menu-Button für Handys -->
+            <button class="menu-toggle" aria-label="Menü öffnen" onclick="toggleMenu()">
+                ☰ Menü
+            </button>
+        </div>
+
+        <!-- Die Navigationsleiste (mit ID für das JavaScript) -->
+        <nav class="main-nav" id="mainNav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="oeffnungszeiten.html">Öffnungszeiten</a></li>
+                
+                <!-- Dropdown Menü für Speisekarte -->
+                <li class="dropdown">
+                    <a href="speisekarte.html" class="dropbtn">Speisekarte &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="mittagstisch.html">Mittagstisch</a>
+                        <a href="speisekarte.html">Speisekarte</a>
+                        <a href="feiertagskarte.html">Sonn- und Feiertagskarte</a>
+                    </div>
+                </li>
+                
+<li><a href="veranstaltungen.html">Veranstaltungen</a></li>
+                <li><a href="catering.html">Catering & Lieferung</a></li>
+                <li><a href="kontakt.html">Kontakt & Anfahrt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hauptinhalt: Sonn- und Feiertagskarte -->
+    <main class="container">
+        <section class="menu-image-section centered-page-header">
+            <h2>Sonn- und Feiertagskarte</h2>
+            <p class="subtitle">Genießen Sie unsere besonderen Gerichte an Sonn- und Feiertagen.</p>
+
+            <!-- Lieferservice / Abhol-Hinweis direkt über dem Bild -->
+            <div class="delivery-notice-box">
+                <span class="delivery-icon">🚗</span>
+                <div class="delivery-text">
+                    <strong>Gerne auch zum Genießen zu Hause!</strong>
+                    <p>Sprechen Sie uns an oder bestellen Sie rechtzeitig telefonisch unter <a href="tel:07957926877">07957 926877</a>.</p>
+                </div>
+            </div>
+
+            <div class="centered-image-box">
+                <!-- Speichern Sie Ihr Feiertagskarten-Bild als "feiertagskarte.jpg" im Ordner "images" -->
+                <img src="images/feiertagskarte.jpg" alt="Sonn- und Feiertagskarte Landgasthof Adler" class="responsive-menu-img">
+            </div>
+
+            <!-- Zusätzlicher Hinweis / Social Media -->
+            <div class="info-box" style="margin-top: 30px;">
+                <p>Den aktuellen Sonn- und Feiertags-Speiseplan finden Sie auch immer zeitnah auf unseren Social-Media-Kanälen (WhatsApp, Instagram & Facebook).</p>
+                <p style="margin-top: 10px;">Telefonische Reservierung & Bestellung: <strong>07957 926877</strong></p>
+            </div>
+        </section>
+    </main>
+
+<!-- Fußleiste -->
+    <footer>
+        <div class="footer-content">
+            <span>&copy; 2026 Landgasthof Adler</span>
+            <span class="separator">|</span>
+            <a href="datenschutz.html">Datenschutz</a>
+            <span class="separator">|</span>
+            <a href="impressum.html">Impressum</a>
+        </div>
+    </footer>
+<!-- Skript für das mobile Burger-Menü -->
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("mainNav");
+            nav.classList.toggle("active");
+        }
+    </script>
+    
+</body>
+</html>

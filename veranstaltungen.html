@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veranstaltungen - Landgasthof Adler</title>
+    <!-- Verknüpfung zur selben CSS-Datei -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Kopfzeile mit Logo/Banner -->
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Landgasthof Adler Logo" class="site-logo">
+            </a>
+            
+            <!-- Mobiler Burger-Menu-Button -->
+            <button class="menu-toggle" aria-label="Menü öffnen" onclick="toggleMenu()">
+                ☰ Menü
+            </button>
+        </div>
+
+        <!-- Die Navigationsleiste -->
+        <nav class="main-nav" id="mainNav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="oeffnungszeiten.html">Öffnungszeiten</a></li>
+                
+                <!-- Dropdown Menü für Speisekarte -->
+                <li class="dropdown">
+                    <a href="speisekarte.html" class="dropbtn">Speisekarte &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="mittagstisch.html">Mittagstisch</a>
+                        <a href="speisekarte.html">Speisekarte</a>
+                        <a href="feiertagskarte.html">Sonn- und Feiertagskarte</a>
+                    </div>
+                </li>
+                
+<li><a href="veranstaltungen.html">Veranstaltungen</a></li>
+                <li><a href="catering.html">Catering & Lieferung</a></li>
+                <li><a href="kontakt.html">Kontakt & Anfahrt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hauptinhalt: Veranstaltungen -->
+    <main class="container">
+        <section class="menu-image-section centered-page-header">
+            <h2>Veranstaltungen & Termine</h2>
+            <p class="subtitle">Erleben Sie gesellige Feste und besondere Events bei uns im Landgasthof Adler.</p>
+
+            <!-- Hinweis-Box oben -->
+            <div class="delivery-notice-box" style="border-left-color: #ff9800; background-color: #fff8e1; max-width: 1200px;">
+                <span class="delivery-icon">📅</span>
+                <div class="delivery-text">
+                    <strong style="color: #e65100;">Feiern & Feste im Adler</strong>
+                    <p>Planen Sie Ihre nächste Veranstaltung bei uns? Sprechen Sie uns an – wir richten Buffets und Feiern für Anlässe jeder Art für Sie aus!</p>
+                </div>
+            </div>
+
+            <!-- Flexbox-Container: Links die Slideshow, Rechts die Tabelle -->
+            <div class="events-layout-grid">
+                
+                <!-- Linke Spalte: Die automatische Bilder-Slideshow -->
+                <div class="events-image-col">
+                    <div class="centered-image-box slideshow-container" style="margin: 0;">
+                        
+                        <!-- 
+                          Fügen Sie hier beliebig viele Bilder ein. 
+                          Legen Sie die Bilder z.B. als event1.jpg, event2.jpg, event3.jpg im Ordner "images" ab.
+                        -->
+                        <img src="images/event1.jpg" alt="Veranstaltung Landgasthof Adler" class="responsive-menu-img slide active-slide">
+                        <img src="images/event2.jpg" alt="Veranstaltung Landgasthof Adler" class="responsive-menu-img slide">
+                        <img src="images/event3.jpg" alt="Veranstaltung Landgasthof Adler" class="responsive-menu-img slide">
+
+                    </div>
+                </div>
+
+                 <!-- Rechte Spalte: Die Tabelle für bevorstehende Veranstaltungen (5 Zeilen, 2 Spalten) -->
+                <div class="events-table-col">
+                    <div class="upcoming-events-card">
+                        <h3>Bevorstehende Termine</h3>
+                        <table class="events-table">
+                            <thead>
+                                <tr>
+                                    <th>Datum / Zeit</th>
+                                    <th>Veranstaltung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>03.10.2026</strong></td>
+                                    <td>Wurschdhoofastupfe <em>(Schlachtschüsselbüffet)</em></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>17.10.2026</strong></td>
+                                    <td>Geschlossen</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>24.12.2026</strong></td>
+                                    <td>Wir kochen ihr Weihnachtsessen </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>25.12.2026</strong></td>
+                                    <td>von 10-14 Uhr geöffnet</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>26.12.2026</strong></td>
+                                    <td>von 10-14 Uhr geöffnet</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>31.12.2026</strong></td>
+                                    <td>Silvesterbüffet</td>
+                                </tr>
+                                <tr>
+                                    <td><em></em></td>
+                                    <td>Aktuelle Infos auch auf Social Media!</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Zusätzlicher Hinweis / Social Media -->
+            <div class="info-box" style="margin-top: 30px; max-width: 1200px; margin-left: auto; margin-right: auto;">
+                <p>Aktuelle Ankündigungen zu bevorstehenden Events und Feiertagen finden Sie auch immer zeitnah auf unseren Social-Media-Kanälen (WhatsApp, Instagram & Facebook).</p>
+                <p style="margin-top: 10px;">Telefonische Anfragen & Reservierungen: <strong>07957 926877</strong></p>
+            </div>
+        </section>
+    </main>
+
+<!-- Fußleiste -->
+    <footer>
+        <div class="footer-content">
+            <span>&copy; 2026 Landgasthof Adler</span>
+            <span class="separator">|</span>
+            <a href="datenschutz.html">Datenschutz</a>
+            <span class="separator">|</span>
+            <a href="impressum.html">Impressum</a>
+        </div>
+    </footer>
+    <!-- Skripte für Burger-Menü und Slideshow -->
+    <script>
+        // Mobiles Menü öffnen/schließen
+        function toggleMenu() {
+            var nav = document.getElementById("mainNav");
+            nav.classList.toggle("active");
+        }
+
+        // Automatischer Bildwechsel alle 10 Sekunden (10000 Millisekunden)
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function nextSlide() {
+            if (slides.length === 0) return;
+            
+            // Aktuelles Bild ausblenden
+            slides[currentSlide].classList.remove("active-slide");
+            
+            // Zum nächsten Bild springen (und am Ende wieder von vorne beginnen)
+            currentSlide = (currentSlide + 1) % slides.length;
+            
+            // Neues Bild einblenden
+            slides[currentSlide].classList.add("active-slide");
+        }
+
+        // Timer starten (10000 ms = 10 Sekunden)
+        if (slides.length > 1) {
+            setInterval(nextSlide, 8000);
+        }
+    </script>
+
+</body>
+</html>

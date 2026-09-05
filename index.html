@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landgasthof Adler - Mariäkappel</title>
+    <!-- Verknüpfung zur zentralen CSS-Datei -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Kopfzeile mit Logo/Banner -->
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Landgasthof Adler Logo" class="site-logo">
+            </a>
+            
+            <!-- NEU: Der Burger-Menu-Button für Handys -->
+            <button class="menu-toggle" aria-label="Menü öffnen" onclick="toggleMenu()">
+                ☰ Menü
+            </button>
+        </div>
+
+        <!-- Die Navigationsleiste (mit ID für das JavaScript) -->
+        <nav class="main-nav" id="mainNav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="oeffnungszeiten.html">Öffnungszeiten</a></li>
+                
+                <!-- Dropdown Menü für Speisekarte -->
+                <li class="dropdown">
+                    <a href="speisekarte.html" class="dropbtn">Speisekarte &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="mittagstisch.html">Mittagstisch</a>
+                        <a href="speisekarte.html">Speisekarte</a>
+                        <a href="feiertagskarte.html">Sonn- und Feiertagskarte</a>
+                    </div>
+                </li>
+                
+<li><a href="veranstaltungen.html">Veranstaltungen</a></li>
+                <li><a href="catering.html">Catering & Lieferung</a></li>
+                <li><a href="kontakt.html">Kontakt & Anfahrt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hauptinhalt der Startseite -->
+    <main class="container">
+        
+        <!-- Willkommens-Sektion -->
+        <section class="welcome-section">
+            <h2>Herzlich willkommen im Landgasthof Adler!</h2>
+            
+            <div class="welcome-text-box centered-design">
+                <p class="intro-highlight">
+                    Seit über 30 Jahren stehen wir für Qualität, Gastfreundschaft und echte Leidenschaft für gutes Essen.
+                </p>
+                
+                <p>
+                    Unser Ziel ist es, dass Sie sich bei uns wohlfühlen und eine schöne Auszeit vom Alltag genießen können. 
+                    Wir freuen uns, Sie bei uns begrüßen zu dürfen und wünschen Ihnen einen angenehmen Aufenthalt sowie guten Appetit!
+                </p>
+
+                <div class="feature-badges">
+                    <div class="badge-item">
+                        <span>🎉</span>
+                        <strong>Catering & Buffets</strong>
+                        <p>Für Anlässe jeder Art – sprechen Sie uns an, wir planen Ihre Veranstaltung.</p>
+                    </div>
+                    
+                    <div class="badge-item">
+                        <span>🚗</span>
+                        <strong>Mittagstisch-Lieferservice</strong>
+                        <p>Mo–Fr in Kreßberg & Umgebung (Kindergärten, Schulen, Firmen & Privathaushalte).<br>
+                        <em>Bestellannahme für den Mittagstisch bis 9 Uhr.</em></p>
+                    </div>
+                </div>
+
+                <!-- NEUE LANGE BOX: Hinweis zu Reservierungen & Bestellungen -->
+                <div class="phone-order-banner">
+                    <span class="phone-banner-icon">📞</span>
+                    <div class="phone-banner-text">
+                        <strong>Wichtiger Hinweis zu Reservierungen & Bestellungen</strong>
+                        <p>Reservierungen für unseren Gastraum sowie Bestellungen für den Lieferservice oder zum Abholen nehmen wir <strong>ausschließlich telefonisch</strong> unter <a href="tel:07957926877">07957 926877</a> entgegen. Vielen Dank für Ihr Verständnis!</p>
+                    </div>
+                </div>
+
+                <p class="social-hint">
+                    📱 Den aktuellen Speiseplan finden Sie immer hier und auf unseren Social-Media-Kanälen:<br>
+                    <a href="https://whatsapp.com/channel/0029VacyyfI4Y9ln62MXui1x" target="_blank" class="inline-social-link whatsapp-color">WhatsApp</a>, 
+                    <a href="https://www.instagram.com/landgasthofadler_kressberg/" target="_blank" class="inline-social-link instagram-color">Instagram</a> & 
+                    <a href="https://www.facebook.com/adlerteam.mariaekappel" target="_blank" class="inline-social-link facebook-color">Facebook</a>
+                </p>
+                
+                <div class="welcome-signature">
+                    <strong>Renate und Matthias Vogt</strong><br>
+                    <span>mit dem gesamten Adler-Team</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Neuigkeiten-Box für kurzfristige Infos / Schließzeiten -->
+        <section class="news-section" style="margin-top: 40px;">
+            <h2>Aktuelle Hinweise & Neuigkeiten</h2>
+            <p class="subtitle">Hier informieren wir Sie kurzfristig über Änderungen oder Aktionen.</p>
+            
+            <div class="news-image-container">
+                <!-- Die Datei news.jpg im images-Ordner -->
+                <img src="images/news.jpg" alt="Aktuelle Neuigkeiten und Hinweise vom Landgasthof Adler" class="news-image">
+            </div>
+
+            <!-- Allgemeine Info Box -->
+            <div class="info-box" style="margin-top: 30px;">
+                <p><strong>Adresse:</strong> Crailsheimer Straße 16, 74564 Kreßberg - Mariäkappel</p>
+                <p><strong>Telefon:</strong> 07957 926877</p>
+                <p class="kitchen-info">🍳 <strong>Warme Küche:</strong> An unseren Öffnungszeiten verwöhnen wir Sie durchgehend mit warmer Küche bis 20:00 Uhr.</p>
+            </div>
+        </section>
+
+    </main>
+
+<!-- Fußleiste -->
+    <footer>
+        <div class="footer-content">
+            <span>&copy; 2026 Landgasthof Adler</span>
+            <span class="separator">|</span>
+            <a href="datenschutz.html">Datenschutz</a>
+            <span class="separator">|</span>
+            <a href="impressum.html">Impressum</a>
+        </div>
+    </footer>
+<!-- Skript für das mobile Burger-Menü -->
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("mainNav");
+            nav.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

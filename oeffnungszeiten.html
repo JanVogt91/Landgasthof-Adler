@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öffnungszeiten - Landgasthof Adler</title>
+    <!-- Verknüpfung zur selben CSS-Datei -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Kopfzeile mit Logo/Banner -->
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Landgasthof Adler Logo" class="site-logo">
+            </a>
+            
+            <!-- MOBILER BURGER-MENÜ-BUTTON (Neu hinzugefügt, damit er auf dem Handy erscheint) -->
+            <button class="menu-toggle" aria-label="Menü öffnen" onclick="toggleMenu()">
+                ☰ Menü
+            </button>
+        </div>
+
+        <!-- Die Navigationsleiste mit ID für das JavaScript -->
+        <nav class="main-nav" id="mainNav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="oeffnungszeiten.html">Öffnungszeiten</a></li>
+                
+                <!-- Dropdown Menü für Speisekarte -->
+                <li class="dropdown">
+                    <a href="speisekarte.html" class="dropbtn">Speisekarte &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="mittagstisch.html">Mittagstisch</a>
+                        <a href="speisekarte.html">Speisekarte</a>
+                        <a href="feiertagskarte.html">Sonn- und Feiertagskarte</a>
+                    </div>
+                </li>
+                
+                <!-- Veranstaltungen -->
+                <li><a href="veranstaltungen.html">Veranstaltungen</a></li>
+                
+                <li><a href="kontakt.html">Kontakt & Anfahrt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hauptinhalt: Öffnungszeiten (Ihre originalen Inhalte beibehalten) -->
+    <main class="container">
+        <section class="opening-hours-section">
+            <h2>Unsere Öffnungszeiten</h2>
+            <p class="subtitle">Wir freuen uns auf Ihren Besuch in Mariäkappel.</p>
+
+            <!-- Öffnungszeiten-Tabelle -->
+            <div class="table-container">
+                <table class="hours-table">
+                    <tr>
+                        <td>Montag</td>
+                        <td>Geschlossen</td>
+                    </tr>
+                    <tr>
+                        <td>Dienstag</td>
+                        <td>Geschlossen</td>
+                    </tr>
+                    <tr>
+                        <td>Mittwoch</td>
+                        <td>Geschlossen <em>(öffnet auf Anfrage)</em></td>
+                    </tr>
+                    <tr>
+                        <td>Donnerstag</td>
+                        <td>ab 17:00 Uhr</td>
+                    </tr>
+                    <tr>
+                        <td>Freitag</td>
+                        <td>ab 17:00 Uhr</td>
+                    </tr>
+                    <tr>
+                        <td>Samstag</td>
+                        <td>ab 17:00 Uhr</td>
+                    </tr>
+                    <tr>
+                        <td>Sonn- und Feiertags</td>
+                        <td>11:00 – 14:00 Uhr<br>und ab 17:00 Uhr</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Küchenhinweis -->
+            <div class="info-box">
+                <p class="kitchen-info">🍳 <strong>Warme Küche:</strong> An unseren Öffnungszeiten kochen wir für Sie durchgehend bis 20:00 Uhr.</p>
+                <p style="margin-top: 10px;">Für Tischreservierungen oder Anfragen erreichen Sie uns unter: <strong>07957 92 68 77</strong></p>
+            </div>
+        </section>
+    </main>
+
+<!-- Fußleiste -->
+    <footer>
+        <div class="footer-content">
+            <span>&copy; 2026 Landgasthof Adler</span>
+            <span class="separator">|</span>
+            <a href="datenschutz.html">Datenschutz</a>
+            <span class="separator">|</span>
+            <a href="impressum.html">Impressum</a>
+        </div>
+    </footer>
+    <!-- Skript für das mobile Burger-Menü -->
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("mainNav");
+            nav.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
